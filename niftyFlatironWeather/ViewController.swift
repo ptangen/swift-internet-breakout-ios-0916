@@ -7,19 +7,62 @@
 //
 
 import UIKit
+import CoreLocation
+
 
 class ViewController: UIViewController {
 
+    let locationManager = CLLocationManager()
+    var latitude = Double()
+    var longitude = Double()
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupLocationManager()
+        
+        
+        
+        print(self.longitude)
+        print(self.latitude)
+        
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+
+
+}
+
+
+
+
+
+
+extension ViewController: CLLocationManagerDelegate{
+    func setupLocationManager(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.requestLocation()
+        self.latitude = (locationManager.location?.coordinate.latitude)!
+        self.longitude = (locationManager.location?.coordinate.longitude)!
+        
+        
+        
+        
+        
+        
     }
-
-
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
 }
 
