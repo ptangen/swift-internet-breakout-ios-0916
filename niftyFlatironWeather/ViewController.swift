@@ -20,25 +20,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLocationManager()
-        
-        
-        
-        print(self.longitude)
-        print(self.latitude)
-        
-        
+    
         
     }
 
-    
-    
 
 
 }
-
-
-
-
 
 
 extension ViewController: CLLocationManagerDelegate{
@@ -46,20 +34,14 @@ extension ViewController: CLLocationManagerDelegate{
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-        
         locationManager.requestLocation()
-        self.latitude = (locationManager.location?.coordinate.latitude)!
-        self.longitude = (locationManager.location?.coordinate.longitude)!
         
-        
-        
-        
-        
-        
+        if let unwrappedlatitude = locationManager.location?.coordinate.latitude, let unwrappedLongitude = locationManager.location?.coordinate.longitude{
+            self.latitude = unwrappedlatitude
+            self.longitude = unwrappedLongitude
+        }
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
