@@ -12,6 +12,10 @@
 		8F07727A1DC2FDEF0061A640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0772781DC2FDEF0061A640 /* Main.storyboard */; };
 		8F07727C1DC2FDEF0061A640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F07727B1DC2FDEF0061A640 /* Assets.xcassets */; };
 		8F07727F1DC2FDEF0061A640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F07727D1DC2FDEF0061A640 /* LaunchScreen.storyboard */; };
+		8F0772871DC37DDD0061A640 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0772861DC37DDD0061A640 /* DataStore.swift */; };
+		8F0772891DC37E740061A640 /* ForecastApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0772881DC37E740061A640 /* ForecastApiClient.swift */; };
+		8F07728B1DC37E8F0061A640 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F07728A1DC37E8F0061A640 /* Secrets.swift */; };
+		8F07728D1DC380710061A640 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F07728C1DC380710061A640 /* Forecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		8F07727B1DC2FDEF0061A640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F07727E1DC2FDEF0061A640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F0772801DC2FDEF0061A640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F0772861DC37DDD0061A640 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		8F0772881DC37E740061A640 /* ForecastApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastApiClient.swift; sourceTree = "<group>"; };
+		8F07728A1DC37E8F0061A640 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		8F07728C1DC380710061A640 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 			children = (
 				8F0772741DC2FDEF0061A640 /* AppDelegate.swift */,
 				8F0772761DC2FDEF0061A640 /* ViewController.swift */,
+				8F0772861DC37DDD0061A640 /* DataStore.swift */,
+				8F07728C1DC380710061A640 /* Forecast.swift */,
+				8F0772881DC37E740061A640 /* ForecastApiClient.swift */,
+				8F07728A1DC37E8F0061A640 /* Secrets.swift */,
 				8F0772781DC2FDEF0061A640 /* Main.storyboard */,
 				8F07727B1DC2FDEF0061A640 /* Assets.xcassets */,
 				8F07727D1DC2FDEF0061A640 /* LaunchScreen.storyboard */,
@@ -138,6 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F0772771DC2FDEF0061A640 /* ViewController.swift in Sources */,
+				8F07728B1DC37E8F0061A640 /* Secrets.swift in Sources */,
+				8F0772871DC37DDD0061A640 /* DataStore.swift in Sources */,
+				8F0772891DC37E740061A640 /* ForecastApiClient.swift in Sources */,
+				8F07728D1DC380710061A640 /* Forecast.swift in Sources */,
 				8F0772751DC2FDEF0061A640 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

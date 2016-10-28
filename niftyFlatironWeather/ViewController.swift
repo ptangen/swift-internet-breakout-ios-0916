@@ -15,18 +15,17 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     var latitude = Double()
     var longitude = Double()
+    var store = DataStore.sharedInstance
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLocationManager()
         
-        
-        
-        print(self.longitude)
-        print(self.latitude)
-        
-        
+        ForecastApiClient.getCurrentWeather(latitude: String(self.latitude), longitude: String(self.longitude)) { (forecast) in
+            print(forecast.summary)
+        }
+   
         
     }
 
@@ -48,8 +47,9 @@ extension ViewController: CLLocationManagerDelegate{
         locationManager.requestWhenInUseAuthorization()
         
         locationManager.requestLocation()
-        self.latitude = (locationManager.location?.coordinate.latitude)!
-        self.longitude = (locationManager.location?.coordinate.longitude)!
+        store.latitude =  String((locationManager.location?.coordinate.latitude)!)
+        store.longitude = String((locationManager.location?.coordinate.longitude)!)
+        
         
         
         
